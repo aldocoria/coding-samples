@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, height=device-height')
+    title= title
+    block css
+      link(rel='stylesheet', href='/material/css/base.css')
+      link(rel='stylesheet', href='/material/css/project.min.css')
+      link(rel='stylesheet', href='/css/main.css')
+  body(onload="document.body.style.opacity='1'")
+    block content

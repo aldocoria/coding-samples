@@ -1,0 +1,48 @@
+extend layout
+block content
+	include ./partials/sidemenu.jade
+	+sidebar(user)
+	section.main
+		.mylocation-button
+			.mylocation-icon
+		#map
+		#directions-panel
+			include ./partials/search-wizard.jade
+		#show-dialog.modal.modal-modal-va-middle.fade(aria-hidden="true", role="dialog", tabindex="-1")
+			.modal-dialog.modal-xs
+				.modal-content
+					.modal-heading
+						h5.text-center YA PUEDES RELAJARTE
+					.modal-inner 
+						.row.col-lg-12.col-sm-12
+							span.center.icon.icon-3x notifications_active
+						.row.col-lg-12.col-sm-12
+							p.text-center Se han enviado alertas a los cadetes más cercanos. Te notificaremos cuando uno esté en camino. ¡Gracias!
+					.modal-footer
+						p.text-right
+							a#accept-relax.btn.btn-flat.btn-brand-accent.waves-attach.waves-effect(data-dismiss="modal") ENTENDIDO			
+		#directions-steps
+		#distance-costs.card
+			.tile-wrap
+				.tile.tile-collapse.active
+					div(data-target="#distance-cost", data-toggle="tile")
+						.tile-inner 
+							h7 DETALLES DEL ENVIO
+							a.pull-right
+								span#more-less.icon-2x.icon expand_more
+
+
+					.tile-active-show.collapse.in#distance-cost
+						.tile-sub
+							.row.col-lg-12.col-sm-12
+								h8.icon.icon-2x map 
+								span#distance
+							.row.col-lg-12.col-sm-12
+								h8.icon.icon-2x schedule
+								span#duration
+	include ./partials/footer.jade
+	include ./partials/loading.jade
+	include ./partials/radar.jade
+	script(src='/js/main.js')
+	script(src='/js/galguMap.js')
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD2yd4w0k1YnMlXYvPcbZnkMq630M0y9bs&libraries=places,geometry')

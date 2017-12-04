@@ -1,0 +1,45 @@
+mixin sidebar(user)
+    header.header.header-waterfall
+        ul.nav.nav-list.pull-left
+          li
+            a(data-toggle="menu", href="#doc_menu")
+              span.icon.icon-2x menu
+            
+        
+        a.header-logo.margin-left-no(href="index.html")
+       
+              
+        .logo 
+          img(src="/img/logo-white.png")
+      nav#doc_menu.menu(aria-hidden="true", tabindex="-1")
+        .menu-scroll
+          .menu-content
+            a.menu-logo(href="#") 
+              span.avatar.avatar-sm
+                img(alt="#", src="img/pixel-aldo.jpg")
+              span.user-fullname #
+            ul.nav
+              li
+                a.collaosed.waves-attach(data-toggle="collapse", href="/mobile")
+                  i.icon.icon-2x home
+                  |Inicio
+              li
+                a.collapsed.waves-attach(data-toggle="collapse", href="/profile")
+                  i.icon.icon-2x account_circle
+                  |Perfil
+              li
+                a.collapsed.waves-attach(data-toggle="collapse", href="/history")
+                  i.icon.icon-2x history
+                  |Historial de pedidos
+              li
+                a.collapsed.waves-attach(data-toggle="collapse", href="/promocodes")
+                  i.icon.icon-2x redeem
+                  |Códigos de promoción
+              li
+                a.collapsed.waves-attach(data-toggle="collapse", href="/help")
+                  i.icon.icon-2x help
+                  |Ayuda
+                li
+                    a.collapsed.waves-attach(data-toggle="collapse", href="/contactus")
+                      i.icon.icon-2x feedback
+                      |Contáctenos

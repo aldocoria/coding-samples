@@ -1,0 +1,17 @@
+extend layout
+block content
+    section.main
+        #splash-screen
+            img(src="/img/logo-colours.png")
+
+
+        #login-register-wrapper 
+            .full-video-wrapper
+                .logo 
+                    img(src="/img/logo-white.png")
+
+            .buttons-wrapper 
+                a#login.btn.btn-red.waves-attach.waves-light.waves-effect(href="/api/v1/fblogin") Login
+                a#register.btn.btn-green.waves-attach.waves-light.waves-effect(href="/api/v1/fblogin") Registro
+     include ./partials/footer.jade
+     script(src='/js/splash.js')

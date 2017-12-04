@@ -1,0 +1,31 @@
+{
+  "name": "galgu-backend",
+  "version": "0.0.1",
+  "description": "Galgu REST API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galguapp/galgu-backend.git"
+  },
+  "author": "Galgu Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galguapp/galgu-backend/issues"
+  },
+  "homepage": "https://github.com/galguapp/galgu-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "connect-ensure-login": "^0.1.1",
+    "convict": "^1.2.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jade": "*",
+    "mongodb": "^2.1.14",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.0"
+  }
+}

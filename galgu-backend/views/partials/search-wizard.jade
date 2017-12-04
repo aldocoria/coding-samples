@@ -1,0 +1,32 @@
+#step-1
+	.content-wrapper
+		.row.col-lg-12.col-sm-12
+			input.directions.controls#dir-source(value="",placeholder="Elegir dirección de retiro", type="search")
+		.row.col-lg-12.col-sm-12
+			input.directions.controls#dir-destination(value="",placeholder="Elegir dirección de entrega", type="search")
+
+	.row.row.col-lg-12.col-sm-12
+		a#get-directions.wizard-step.next.btn.btn-flat.pull-right(data-step="1") siguiente
+			span.icon chevron_right
+#step-2.hidden
+	.content-wrapper
+		.row.col-lg-12.col-sm-12
+			textarea.controls.directions#details(value="",placeholder="Agregar piso, departamento, y otros detalles")
+	.row.col-lg-12.col-sm-12
+		a.wizard-step.prev.btn.btn-flat.pull-left(data-step="2")
+			span.icon chevron_left 
+			|anterior
+			
+		a#save-details.next.wizard-step.btn.btn-flat.pull-right(data-step="2") siguiente
+			span.icon chevron_right
+
+#step-3.hidden
+	.content-wrapper
+		.row.col-lg-12.col-sm-12
+			include ./../partials/tabs-vehicle.jade
+	.row.col-lg-12.col-sm-12
+		a.wizard-step.prev.btn.btn-flat.pull-left(data-step="3")
+			span.icon chevron_left 
+			|anterior
+			
+		a#save-form.btn.btn-flat.pull-right.btn-brand-accent.waves-attach(data-backdrop="static", data-toggle="modal", href="#show-dialog") SOLICITAR CADETE

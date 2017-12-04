@@ -1,0 +1,23 @@
+.col-lg-12.col-sm-12
+	nav#tab-vehicles.tab-nav.margin-top-no
+		ul.nav.nav-justified
+			li.active
+				a.waves-attach.waves-effect(data-toggle="tab", href="#cartab")
+					span.icon.icon-2x directions_car
+			li
+				a.waves-attach.waves-effect(data-toggle="tab", href="#scootertab")
+					span.icon.icon-2x motorcycle
+					
+			li
+				a.waves-attach.waves-effect(data-toggle="tab", href="#biketab")
+					span.icon.icon-2x directions_bike
+		.tab-nav-indicator
+		
+		#cartab.tab-pane.fade.active.in
+			h3 $200 ARS
+		#scootertab.tab-pane.fade
+			h3 $150 ARS
+		#biketab.tab-pane.fade
+			h3 $100 ARS
+
+		
